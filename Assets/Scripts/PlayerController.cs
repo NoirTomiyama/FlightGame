@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -32,6 +33,11 @@ public class PlayerController : MonoBehaviour
     if (Input.GetKey(KeyCode.DownArrow))
     {
       transform.position += new Vector3(0, -speed * Time.deltaTime, 0);
+    }
+
+    if(transform.position.z >= 150)
+    {
+      SceneManager.LoadScene("Goal");
     }
   }
 }
