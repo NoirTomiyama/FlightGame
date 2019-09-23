@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GamestartScript : MonoBehaviour
+public class GameRetryScript : MonoBehaviour
 {
   // Start is called before the first frame update
   void Start()
   {
-
+        
   }
 
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.Space))
+    if (Input.GetKeyDown(KeyCode.R))
     {
       SceneManager.LoadScene("Main");
     }
-
   }
 }
